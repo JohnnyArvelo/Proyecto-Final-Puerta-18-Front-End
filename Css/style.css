@@ -58,6 +58,7 @@ footer{
     width: 100%;
     background: url("/Img/fondo.jpg") no-repeat center center;
     background-size: cover;
+    text-shadow: black 0.1em 0.1em 0.2em
 }
 
 .Letras h1{
@@ -70,25 +71,45 @@ footer{
     font-size: 2em;
 }
 
+.centro{
+  display: flex;
+  flex-wrap: wrap;
+}
 .texto_1 {
-    padding: 1.5em;
-    height: 25vh;
+  margin-top: 20px;
+  margin-left: -20px;
+  text-align: center;
+    padding: 1em;
+    height: 20vh;
     width: 75vh;
     font-size: 1.5em;
    color: rgb(8, 8, 8);
+   background: #d6b707;
+   border-radius: 20px 20px 20px 20px;
+   -webkit-border-radius: 20px 20px 20px 20px;
+   -moz-border-radius: 20px 20px 20px 20px;
 }
 
 .texto_2 {
-    padding: 1.5em;
-    height: 40vh;
+  margin-top: 20px;
+  margin-left: -20px;
+  margin-bottom: 20px;
+  text-align: center;
+    padding: 1em;
+    height: 32vh;
     width: 75vh;
     font-size: 1.5em;
    color: rgb(8, 8, 8);
+   background: #d6b707;
+   border-radius: 20px 20px 20px 20px;
+   -webkit-border-radius: 20px 20px 20px 20px;
+   -moz-border-radius: 20px 20px 20px 20px;
 }
 
-aside{
-  text-align: right;
+.Parte_Registro{
+  margin: auto;
 }
+
 .Boton_registro a{
     margin: 2em;
     font-size: 3em;
@@ -101,6 +122,27 @@ aside{
     text-decoration: none;
     background: #764d9f;
     width: min(100%, 300px);
+}
+
+.personas_registro{
+  width: 400px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+.persona_check{
+  width: 400px;
+  height: 200px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.letras_registro{
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  text-shadow: 0 0 0.2em #310419, 0 0 0.2em #310419 ;
 }
 
 /* Para formulario */
@@ -225,3 +267,273 @@ input[type="radio"]{
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #310419, #9b59b6);
  }
+
+ /* Notificacion registro */
+.button input{
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #310419, #9b59b6);
+}
+.button input:hover{
+ /* transform: scale(0.99); */
+ background: linear-gradient(-135deg, #310419, #9b59b6);
+}
+button{
+ padding: 12px 20px;
+ height: 100%;
+ width: 100%;
+ border-radius: 5px;
+ outline: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background:  #830ef1;
+}
+.toast{
+ position: absolute;
+ top: 25px;
+ right: 30px;
+ border-radius: 12px;
+ background: #fff;
+ padding: 20px 35px 20px 25px;
+ box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+ border-left: 6px solid #830ef1;
+ overflow: hidden;
+ transform: translateX(calc(100% + 30px));
+ transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toast.active{
+ transform: translateX(0%);
+}
+
+.toast .toast-content{
+ display: flex;
+ align-items: center;
+}
+
+.toast-content .check{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 35px;
+ width: 35px;
+ background-color: #830ef1;
+ color: #fff;
+ font-size: 20px;
+ border-radius: 50%;
+}
+
+.toast-content .message{
+ display: flex;
+ flex-direction: column;
+ margin: 0 20px;
+}
+
+.message .text{
+ font-size: 20px;
+ font-weight: 400;;
+ color: #666666;
+}
+
+.message .text.text-1{
+ font-weight: 600;
+ color: #333;
+}
+
+.toast .close{
+ position: absolute;
+ top: 10px;
+ right: 15px;
+ padding: 5px;
+ cursor: pointer;
+ opacity: 0.7;
+}
+
+.toast .close:hover{
+ opacity: 1;
+}
+
+.toast .progress{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ height: 3px;
+ width: 100%;
+ background: #ddd;
+}
+
+.toast .progress:before{
+ content: '';
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ height: 100%;
+ width: 100%;
+ background-color: #830ef1;
+}
+
+.progress.active:before{
+ animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+ 100%{
+     right: 100%;
+ }
+}
+
+button:hover{
+ background-color: #830ef1;
+}
+
+.toast.active ~ button{
+ pointer-events: none;
+}
+
+/* Notificacion registro FIN */
+
+
+ /* Para Buscar */
+
+ .violeta{
+  background: #753c9d;
+}
+.busqueda{
+  background: #ededed;
+}
+.portada img{
+  height: min(100%, 12em);
+  width: min(100%, 12em);
+}
+
+table, th, td{
+  border: 1px slateblue solid;
+  border-collapse: collapse;   
+
+}
+.crow{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 0.5px;
+
+}
+table, .resultado_lista, .resultado_busqueda {
+  width: 50%;
+  margin: 0 auto;
+}
+th, tr ,td{
+  padding: 10px;
+}
+th{
+  text-align: left;
+}
+
+a{
+  margin-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.firma {
+  color: rgb(199, 199, 199);
+}
+
+.flexsearch--wrapper {
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	overflow: hidden;
+	background: transparent;
+	margin: 0;
+	position: static;
+}
+	
+.flexsearch--form {
+	overflow: hidden;
+	position: relative;
+}
+	
+.flexsearch--input-wrapper {
+	padding: 0 66px 0 0; 
+	overflow: hidden;
+}
+
+.flexsearch--input {
+  width: 100%;
+}
+
+.flexsearch {
+  position: absolute;
+  padding: 0 400px 0 250px; 
+  top: -8px;
+}
+
+.flexsearch--input {
+  -webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+ 	height: 60px;
+  padding: 0 46px 0 10px;
+	border-color: rgb(88, 7, 109);
+  border-radius: 35px; 
+  border-style: solid;
+	border-width: 5px;
+  margin-top: 15px;
+  color: rgb(64, 6, 82);
+  font-family: 'Helvetica', sans-serif;
+	font-size: 26px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+	
+.flexsearch--submit {
+  position: absolute;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 60px;
+	height: 60px;
+  padding: 0;
+  border: none;
+	margin-top: 20px; 
+  margin-right: 5px; 
+	background: transparent;
+  color: rgb(64, 6, 82);
+  font-family: 'Helvetica', sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.flexsearch--input:focus {
+  outline: none;
+  border-color: rgb(64, 6, 82);
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+ 	color: rgb(64, 6, 82); 
+}
+
+.flexsearch--submit:hover {
+  color: rgb(64, 6, 82);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+	color: rgb(64, 6, 82);  
+}
+
+input:-moz-placeholder {
+  color: rgb(64, 6, 82);
+}
