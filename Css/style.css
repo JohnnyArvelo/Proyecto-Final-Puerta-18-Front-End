@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url(fontello.css);
+
 *{
   margin: 0;
   padding: 0;
@@ -11,6 +13,14 @@ header{
     background: #753c9d;
 }
 
+footer{
+  background: #753c9d;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 15px;
+}
+
 .portada img{
     height: min(100%, 12em);
     width: min(100%, 12em);
@@ -18,7 +28,7 @@ header{
 
 .menu {
     float: right;
-    margin: 15px 0;
+    margin: 21px 0;
     cursor: pointer;
 } 
 
@@ -37,12 +47,17 @@ header{
     
 }*/
 
+.contenido_full {
+  background: #ededed;
+}
+
 .Letras{
-    color: #94058d;
-    margin: 1em;
+    color: rgb(199, 199, 199);
     padding: 2em;
     height: 100%;
     width: 100%;
+    background: url("/Img/fondo.jpg") no-repeat center center;
+    background-size: cover;
 }
 
 .Letras h1{
@@ -52,13 +67,13 @@ header{
 
 .Letras h2{
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
 }
 
 .texto_1 {
     padding: 1.5em;
     height: 25vh;
-    width: 50vh;
+    width: 75vh;
     font-size: 1.5em;
    color: rgb(8, 8, 8);
 }
@@ -66,16 +81,19 @@ header{
 .texto_2 {
     padding: 1.5em;
     height: 40vh;
-    width: 50vh;
+    width: 75vh;
     font-size: 1.5em;
    color: rgb(8, 8, 8);
 }
 
+aside{
+  text-align: right;
+}
 .Boton_registro a{
     margin: 2em;
-    font-size: 2em;
+    font-size: 3em;
     Color:white;
-    padding: 6px 24px;
+    padding: 7px 21px;
     border: inset 5px #a101c965;
     border-radius: 20px 20px 20px 20px;
     -webkit-border-radius: 20px 20px 20px 20px;
@@ -84,3 +102,126 @@ header{
     background: #764d9f;
     width: min(100%, 300px);
 }
+
+/* Para formulario */
+
+.registro{
+  background: #ededed;
+}
+.container{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  margin-bottom: 75px;
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: -1px -1px 6px 0 rgb(165, 43, 159), 4px 4px 16px 2px rgb(68, 17, 60);
+}
+.container .title{
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 6px;
+  width: 70px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #310419, #9b59b6);
+}
+.content .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+/*.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #310419;
+}*/
+
+.genero-details .genero-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+.category{
+   display: flex;
+   width: 100%;
+   margin: 14px 0;
+   justify-content: space-between;
+}
+.category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   margin-right: 1em;
+}
+.category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 90%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three,
+ #dot-4:checked ~ .category label .four {
+   background: #9b59b6;
+   border-color: #d9d9d9;
+}
+input[type="radio"]{
+   display: none;
+}
+.button{
+   height: 45px;
+   margin: 35px 0
+}
+.button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #310419, #9b59b6);
+}
+.button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #310419, #9b59b6);
+ }
