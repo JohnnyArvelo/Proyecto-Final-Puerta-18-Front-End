@@ -18,7 +18,7 @@
             </nav>
         </div>
     </header>
-    <div class="flexsearch_2">
+    <div class="flexsearch">
         <div class="flexsearch--wrapper">
             <form class="flexsearch--form" action="" method="post">
                 <div class="flexsearch--input-wrapper">
@@ -29,6 +29,23 @@
         </div>
     </div>
     <main class="busqueda">
+        <div class="filtro">
+            <div id="buttons">
+                <button class="button-value" onclick="filterProduct('all')">Nombre</button>
+                <button class="button-value" onclick="filterProduct('Topwear')">
+                  Apellido
+                </button>
+                <button class="button-value" onclick="filterProduct('Bottomwear')">
+                  NickName
+                </button>
+                <button class="button-value" onclick="filterProduct('Jacket')">
+                  Edad
+                </button>
+                <button class="button-value" onclick="filterProduct('Watch')">
+                  Asistencias
+                </button>
+              </div>
+        </div>
         <br>
         <h1 class="resultado_busqueda"><strong>RESULTADOS DE BUSQUEDA</strong></h1><br>
     <table>
@@ -36,6 +53,7 @@
             <th>Nombre</th>  
             <th>Apellido</th>
             <th>Nick Name</th>
+            <th>DNI</th>
             <th>Curso</th>
             <th>Edad</th>
             <th>Ausente desde</th>
@@ -45,6 +63,7 @@
             <td>nahuel</td>
             <td>calveira</td>
             <td>crow</td>
+            <td>43238788</td>
             <td>front end</td>
             <td>21 años</td>
             <td>no hay faltas</td>
@@ -61,6 +80,7 @@
             <th>Nombre</th>  
             <th>Apellido</th>
             <th>Nick Name</th>
+            <th>DNI</th>
             <th>Curso</th>
             <th>Edad</th>
             <th>Ausente desde</th>
@@ -69,6 +89,7 @@
         <td>Johnny</td>
         <td>Joestar</td>
         <td>JohnnyRac</td>
+        <td>44238977</td>
         <td>front end</td>
         <td>22</td>
         <td>no hay faltas</td>
@@ -77,6 +98,7 @@
         <td>Irina</td>
         <td>Gonzalez</td>
         <td>doxeos</td>
+        <td>41234567</td>
         <td>intro prog</td>
         <td>20</td>
         <td>1/4/2022</td>
@@ -85,6 +107,7 @@
         <td>Maria</td>
         <td>Paz</td>
         <td>Aestetic</td>
+        <td>23238986</td>
         <td>front end</td>
         <td>18</td>
         <td>no hay faltas</td>
@@ -93,6 +116,7 @@
         <td>Lukas</td>
         <td>Kriss</td>
         <td>NFT</td>
+        <td>78123444</td>
         <td>front end</td>
         <td>21</td>
         <td>16/8/2022</td>
